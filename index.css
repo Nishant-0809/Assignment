@@ -1,0 +1,402 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.nav-left-logo img{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.nav-center{
+    width: 800px;
+}
+
+.nav-center ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.nav-center ul li{
+    cursor: pointer;
+    font-size: large;
+    font-weight: 850;
+}
+
+.nav-center ul li:hover{
+    color: #7F7D7C;
+}
+
+.nav-right ul{
+    list-style: none;
+    width: 120px;
+}
+
+.nav-right ul li{
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 50%;
+    width: 15px;
+    font-size: small;
+    
+}
+
+.fa-facebook-f:before {
+    padding-left: 3px;
+}
+
+.fa-whatsapp:before {
+    padding-left: 2px;
+}
+
+/*Center page*/
+
+.banner{
+    height: 600px;
+    background-image: url("heroimg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.text{
+    cursor: pointer;
+    height: 40px;
+    width: 300px;
+    background-image:linear-gradient(to right, #2F2E2D, #7F7D7C );
+    position: relative;
+    top: 500px;
+    left: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.mid{
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mid-text{
+    margin-top: 15px;
+    margin-left: 15px;
+    height: 100px;
+    width: 350px;
+    text-align: center;
+}
+
+/* bottom  */
+
+.container{
+    height: 750px;
+    background-color: lightgrey;
+}
+
+.container-heading {
+    position: relative;
+    font-size: 55px;
+    font-weight: 600;
+    top: 50px;
+    left: 70px;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 120px;   
+}
+
+.card {
+    position: relative;
+    height: 460px;
+    width: 350px;
+}
+
+.card img{
+    height: 280px;
+    width: 350px;
+}
+
+.card-text{
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.card-desc{
+    margin-top: 40px;
+    font-weight: 550;
+}
+
+.button {
+    margin-top: auto; 
+    cursor: pointer;
+    background-color: #000;
+    color: white;
+    font-size: large;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+}
+
+.button:hover{
+    background-color: #7F7D7C;
+    transition: .5s ease-in-out;
+}
+
+.card:nth-child(1) .button {
+    left: 0px; 
+}
+
+.card:nth-child(2) .button {
+    left: calc(50% - 75px); 
+}
+
+.card:nth-child(3) .button {
+    right: 0px; 
+}
+
+
+/* For screens smaller than 425px (small mobile devices) */
+@media only screen and (max-width: 425px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .nav-center {
+        width: 100%;
+    }
+    
+    .nav-center ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .text {
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .mid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .container-heading {
+        top: 20px;
+        left: 20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        top: 50px;
+    }
+
+    .card {
+        margin-bottom: 50px;
+        height: 544px;
+    }
+
+    .card-text,
+    .card-desc {
+        text-align: center;
+    }
+
+    .button {
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .card:nth-child(1) .button {
+        left: 0;
+    }
+
+    .card:nth-child(2) .button {
+        left: 0;
+    }
+
+    .card:nth-child(3) .button {
+        left: 0;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .navbar {
+        height: auto;
+    }
+
+    .nav-center {
+        width: 100%;
+    }
+
+    .nav-center ul {
+        justify-content: space-evenly;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .text {
+        top: 80%;
+        left: 35%;
+        transform: translateX(-50%);
+    }
+
+    .mid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .container-heading {
+        top: 20px;
+        left: 49px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        top: 50px;
+    }
+
+    .card {
+        margin-bottom: 50px;
+        height: 544px;
+    }
+
+    .card-text,
+    .card-desc {
+        text-align: center;
+    }
+
+    .button {
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .card:nth-child(1) .button {
+        left: 0;
+    }
+
+    .card:nth-child(2) .button {
+        left: 0;
+    }
+
+    .card:nth-child(3) .button {
+        left: 0;
+    }
+}
+
+/* For screens between 769px and 1024px */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+        height: auto;
+    }
+
+    .nav-center {
+        width: 100%;
+    }
+
+    .nav-center ul {
+        justify-content: space-evenly;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .text {
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .mid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .container-heading {
+        top: 20px;
+        left: 20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        top: 50px;
+    }
+
+    .card {
+        margin-bottom: 50px;
+    }
+
+    .card-text,
+    .card-desc {
+        text-align: center;
+    }
+
+    .button {
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .card:nth-child(1) .button {
+        left: 0;
+    }
+
+    .card:nth-child(2) .button {
+        left: 0;
+    }
+
+    .card:nth-child(3) .button {
+        left: 0;
+    }
+}
